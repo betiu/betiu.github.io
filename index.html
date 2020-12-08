@@ -16,16 +16,17 @@
 				console.log(bruh);
 				if (bruh == NaN){
 					document.getElementById("diceResult").innerHTML = "لطفا مقدار پولی که نیخواهید شرط ببندید را وارد کنید"
-					return;
 				}
-				number = number - 100000;
-				var shadmr = rnd(1, 6);
-				var player = rnd(1, 6);
-				if(player > shadmr){
-					shadmr = [player, player = shadmr][0];
+				else{
+					number = number - 100000;
+					var shadmr = rnd(1, 6);
+					var player = rnd(1, 6);
+					if(player > shadmr){
+						shadmr = [player, player = shadmr][0];
+					}
+					document.getElementById("diceResult").innerHTML = "شادمهر: " + shadmr.toString(10) + "<br>" + "بازیکن: " + player.toString(10);
+					updateMoney();
 				}
-				document.getElementById("diceResult").innerHTML = "شادمهر: " + shadmr.toString(10) + "<br>" + "بازیکن: " + player.toString(10);
-				updateMoney();
 			}
 		</script>
 	</head>
