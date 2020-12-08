@@ -16,6 +16,10 @@
 					document.getElementById("diceResult").innerHTML = "لطفا مقدار پولی که نیخواهید شرط ببندید را وارد کنید"
 				}
 				else{
+					if(bruh < 0){
+						document.getElementById("diceResult").innerHTML = "داداش خیلی باهوشی ولی نمیشه";
+						return;	
+					}
 					number = number - bruh;
 					var shadmr = rnd(1, 6);
 					var player = rnd(1, 6);
