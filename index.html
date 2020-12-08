@@ -3,15 +3,22 @@
 	<head>
 		<title>betiu!</title>
 		<script>
-		    function myFunction() {
-		      var number = 123;
-		      document.getElementById("money").innerHTML = number;
-		    }
+			var number = 1000000;
+			function myFunction() {
+		      		document.getElementById("money").innerHTML = number;
+		    	}
+		    	function bet(){
+				number = number - 100000;
+				document.getElementById("money").innerHTML = number;
+			}
 		</script>
 	</head>
 	<body onload="myFunction()">
     		<h2>!بتایو</h2>
 		<p>بهترین وبسایت شرطبندی ایرانی</p>
-		<p>پول شما: <span id="money"></span><p>
+		<p>پول شما: <span id="money"></span> تومان<p>
+		<h1>تاس بازی!:</h1>
+		<p>تاس بازی یکی از ساده ترین بازی های بتایو است تنها کاری که انجام میدهید این است که مشخص می کنید ری چقدر پول شرط میبندید و بعد دو تاس انداخته می شود اگر شماره تاس شما از شماره تاس شادمهر بیشتر شود آنگاه مقدار پولی که شرط بسته اید را برنده می شوید و در غیر این صورت آن پول را از دست می دهید</p>
+		<button type="button" onclick="bet()">بت!</button>
 	</body>
 </html>
