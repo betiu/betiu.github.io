@@ -14,11 +14,11 @@
 				var bruh = parseInt(document.getElementById("frm1").elements[0].value, 10);
 				console.log(document.getElementById("frm1").elements[0].value);
 				console.log(bruh);
-				if (bruh == NaN){
+				if (isNaN(bruh)){
 					document.getElementById("diceResult").innerHTML = "لطفا مقدار پولی که نیخواهید شرط ببندید را وارد کنید"
 				}
 				else{
-					number = number - 100000;
+					number = number - bruh;
 					var shadmr = rnd(1, 6);
 					var player = rnd(1, 6);
 					if(player > shadmr){
