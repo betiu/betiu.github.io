@@ -5,7 +5,11 @@
 		<script>
 			var number = 1000000;
 			function rnd(min, max) {
- 				 return Math.floor(Math.random() * (max - min) ) + min;
+				var a = Math.floor(Math.random() * (max - min) ) + min
+				if(a == 7){
+					a = a - 1
+				}
+ 				return a;
 			}
 			function updateMoney() {
 		      		document.getElementById("money").innerHTML = number;
@@ -21,8 +25,8 @@
 						return;	
 					}
 					number = number - bruh;
-					var shadmr = rnd(1, 6);
-					var player = rnd(1, 6);
+					var shadmr = rnd(1, 7);
+					var player = rnd(1, 7);
 					if(player > shadmr){
 						shadmr = [player, player = shadmr][0];
 					}
