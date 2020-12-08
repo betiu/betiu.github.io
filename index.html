@@ -12,8 +12,6 @@
 		    	}
 		    	function playDice(){
 				var bruh = parseInt(document.getElementById("frm1").elements[0].value, 10);
-				console.log(document.getElementById("frm1").elements[0].value);
-				console.log(bruh);
 				if (isNaN(bruh)){
 					document.getElementById("diceResult").innerHTML = "لطفا مقدار پولی که نیخواهید شرط ببندید را وارد کنید"
 				}
@@ -31,7 +29,7 @@
 		</script>
 	</head>
 	<body onload="updateMoney()">
-    		<h2>!بتایو</h2>
+    		<h2>بتایو!</h2>
 		<p>بهترین وبسایت شرطبندی ایرانی</p>
 		<p>پول شما: <span id="money"></span> تومان<p>
 		<h3>تاس بازی!:</h3>
