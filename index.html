@@ -11,6 +11,11 @@
 		      		document.getElementById("money").innerHTML = number;
 		    	}
 		    	function playDice(){
+				var bruh = parseInt(document.getElementById("frm1").elements[i].value);
+				if (bruh = NaN){
+					document.getElementById("diceResult").innerHTML = "لطفا مقدار پولی که نیخواهید شرط ببندید را وارد کنید"
+					return;
+				}
 				number = number - 100000;
 				var shadmr = rnd(1, 6);
 				var player = rnd(1, 6);
@@ -29,6 +34,9 @@
 		<h3>تاس بازی!:</h3>
 		<p>تاس بازی یکی از ساده ترین بازی های بتایو است<br>تنها کاری که انجام میدهید این است که مشخص می کنید روی چقدر پول شرط میبندید و بعد دو تاس انداخته می شود<br>اگر شماره تاس شما از شماره تاس شادمهر بیشتر شود آنگاه مقدار پولی که شرط بسته اید را برنده میشوید و در غیر این صورت آن پول را از دست میدهید</p>
 		<p id="diceResult"></p>
+		<form id="frm1">
+		  پول: <input type="text" name="fname" value=""><br>
+		</form> 
 		<button type="button" onclick="playDice()">بت!</button>
 	</body>
 </html>
