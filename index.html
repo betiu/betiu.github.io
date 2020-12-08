@@ -1,24 +1,34 @@
 <!DOCTYPE html>
-<html dir=Bidi>
+<html dir=rtl>
 	<head>
 		<title>betiu!</title>
 		<script>
 			var number = 1000000;
-			function myFunction() {
+			function rnd(min, max) {
+ 				 return Math.floor(Math.random() * (max - min) ) + min;
+			}
+			function updateMoney() {
 		      		document.getElementById("money").innerHTML = number;
 		    	}
-		    	function bet(){
+		    	function playDice(){
 				number = number - 100000;
-				document.getElementById("money").innerHTML = number;
+				var shadmr = rnd(1, 6);
+				var player = rnd(1, 6);
+				if(player > shadmr){
+					shadmr = [player, player = shadmr][0];
+				}
+				document.getElementById("diceResult").innerHTML = "شادمهر: " + shadmr.toString(10) + "<br>" + "بازیکن: " + player.toString(10);
+				updateMoney();
 			}
 		</script>
 	</head>
-	<body onload="myFunction()">
+	<body onload="updateMoney()">
     		<h2>!بتایو</h2>
 		<p>بهترین وبسایت شرطبندی ایرانی</p>
 		<p>پول شما: <span id="money"></span> تومان<p>
-		<h1>تاس بازی!:</h1>
-		<p>تاس بازی یکی از ساده ترین بازی های بتایو است تنها کاری که انجام میدهید این است که مشخص می کنید ری چقدر پول شرط میبندید و بعد دو تاس انداخته می شود اگر شماره تاس شما از شماره تاس شادمهر بیشتر شود آنگاه مقدار پولی که شرط بسته اید را برنده می شوید و در غیر این صورت آن پول را از دست می دهید</p>
-		<button type="button" onclick="bet()">بت!</button>
+		<h3>تاس بازی!:</h3>
+		<p>تاس بازی یکی از ساده ترین بازی های بتایو است<br>تنها کاری که انجام میدهید این است که مشخص می کنید روی چقدر پول شرط میبندید و بعد دو تاس انداخته می شود<br>اگر شماره تاس شما از شماره تاس شادمهر بیشتر شود آنگاه مقدار پولی که شرط بسته اید را برنده میشوید و در غیر این صورت آن پول را از دست میدهید</p>
+		<p id="diceResult"></p>
+		<button type="button" onclick="playDice()">بت!</button>
 	</body>
 </html>
