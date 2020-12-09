@@ -6,5 +6,37 @@
 }
 
 body {
+    background-color: black;
     font-family: Bnazanin;
+    font-size: 100%;
+}
+
+h1 {
+    color: tomato;
+    font-size: 4.5em;
+}
+
+h2 {
+    color: tomato;
+    font-size: 3.25em;
+}
+
+h3 {
+    color: tomato;
+    font-size: 2em;
+}
+
+.normalText {
+    color: white;
+    font-size: 1.25em;
+}
+
+#betiulogo {
+    width: 200px;
+}
+
+#everything{
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
 }
