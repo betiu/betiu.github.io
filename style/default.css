@@ -1,0 +1,10 @@
+@font-face {
+    font-family: Bnazanin;
+    src: url('../assets/fonts/bnazanin.woff') format('woff');
+    src: url('../assets/fonts/bnazanin.woff2') format('woff2');
+    src: url('../assets/fonts/bnazanin.ttf') format('truetype');
+}
+
+body {
+    font-family: Bnazanin;
+}
