@@ -12,10 +12,10 @@
 			<p class="normalText">پول شما: <span id="money"></span> تومان<p>
 			<h3>تاس بازی!:</h3>
 			<p class="normalText">تاس بازی یکی از ساده ترین بازی های بتایو است<br>تنها کاری که انجام میدهید این است که مشخص می کنید روی چقدر پول شرط میبندید و بعد دو تاس انداخته می شود<br>اگر شماره تاس شما از شماره تاس شادمهر بیشتر شود آنگاه مقدار پولی که شرط بسته اید را برنده میشوید و در غیر این صورت آن پول را از دست میدهید</p>
-			<form id="frm1">
+			<form id="frm1" onsubmit="return false">
 				<div class="normalText">پول: </div><input type="text" name="fname" value="">
 			</form>
-			<button type="button" onclick="playDice()">بت!</button>
+			<button id="betButton" type="button" onclick="playDice()">بت!</button>
 			<p class="normalText" id="diceResult"></p>
 		</div>
 	</body>
